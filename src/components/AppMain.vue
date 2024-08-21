@@ -1,45 +1,23 @@
 <script>
-import axios from 'axios';
-
+import ProjectCard from './ProjectCard.vue';
 export default {
+    components:{
+        ProjectCard,
+    },
     data() {
         return {
-            projects: [],
+            
         }
     },
-    methods: {
-        getProject() {
-            axios.get('http://127.0.0.1:8000/api/project/', {
-                params: {
-                    nome: '',
-                }
-            })
-                .then((response) => {
-                    console.log(response.data.results.data);
-                    this.projects = response.data.results.data;
-                })
-                .catch(function (error) {
-                    console.log(error);
-                })
-                .finally(function () {
-                    // always executed
-                });
-        }
-    },
-    created(){
-        this.getProject();
-    }
 }
 </script>
 
 <template>
     <main>
-        <ul>
-            <li v-for="project in projects">
-                {{ project.nome }}
-            </li>
-        </ul>
+        <ProjectCard/>
     </main>
 </template>
 
-<style></style>
+<style lang="scss">
+
+</style>
