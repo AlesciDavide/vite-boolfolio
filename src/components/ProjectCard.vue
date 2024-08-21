@@ -20,9 +20,8 @@ export default {
                 .then((response) => {
                     console.log(response.data.results.data);
                     this.projects.push(...response.data.results.data);
+                    console.log(this.currentPage, page);
                     this.currentPage = page;
-                    console.log(response.data.results);
-
                 })
                 .catch(function (error) {
                     console.log(error);
