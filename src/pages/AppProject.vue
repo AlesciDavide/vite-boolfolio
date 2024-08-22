@@ -1,5 +1,5 @@
 <script>
-import ProjectCard from './ProjectCard.vue';
+import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
     components:{
@@ -15,10 +15,13 @@ export default {
 
 <template>
     <main>
+        <h1>I miei progetti</h1>
         <ProjectCard/>
     </main>
 </template>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+    h1{
+        text-align: center;
+    }
 </style>
