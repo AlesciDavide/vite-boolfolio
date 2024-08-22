@@ -44,10 +44,9 @@ export default{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 nav{
-    margin: .5rem 0;
+    margin: .5rem  0;
     background: #fff;
     border-radius: 50px;
     padding: 10px;
@@ -58,7 +57,7 @@ nav ul li{
     display: inline-block;
     padding: 13px 35px;
     margin: 10px;
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #777;
     cursor: pointer;

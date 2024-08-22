@@ -23,5 +23,7 @@ export default {
 <style lang="scss" scoped>
     h1{
         text-align: center;
+        font-size: 3rem;
+        margin: 1rem;
     }
 </style>

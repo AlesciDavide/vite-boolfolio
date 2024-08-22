@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import AppHome from './pages/AppHome.vue';
 import AppProject from './pages/AppProject.vue';
 import AppAbout from './pages/AppAbout.vue';
+import Error404 from './pages/errors/Error404.vue';
+import AppSinglePost from './pages/AppSinglePost.vue';
+
 
 const router = createRouter({
 
@@ -19,9 +22,24 @@ const router = createRouter({
             component: AppProject
         },
         {
+            path: '/project/:id',
+            name: 'single-project',
+            component: AppSinglePost
+        },
+        {
             path: '/about',
             name: 'about',
             component: AppAbout
+        },
+        {
+            path: '/404',
+            name: '404',
+            component: Error404
+        },
+        {
+            path: '/404',
+            name: '404',
+            component: Error404
         },
     ]
 });

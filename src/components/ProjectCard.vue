@@ -23,13 +23,14 @@ export default {
                     console.log(this.currentPage, page);
                     this.currentPage = page;
                 })
-                .catch(function (error) {
+                .catch((error) => {
+                    this.$router.push({name: "404"});
                     console.log(error);
                 })
                 .finally(function () {
                     // always executed
                 });
-        }
+        },
     },
     created() {
         this.getProject();
@@ -45,7 +46,9 @@ export default {
                 {{ project.id }}
             </p>
             <p>
-                {{ project.nome }}
+                <RouterLink :to="{name: 'single-project', params: {id: project.id}}">
+                    {{ project.nome }}
+                </RouterLink>
             </p>
             <p>
                 <a :href="project.url_repo">{{ project.url_repo }}</a>
