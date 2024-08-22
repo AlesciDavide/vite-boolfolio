@@ -19,7 +19,7 @@ export default{
                     this.project = response.data.results;
                     console.log(this.project);
                     this.img += this.project.img;
-                    console.log(this.img);
+                    
                 })
                 .catch((error) => {
                     this.$router.push({name: "404"});
@@ -51,6 +51,7 @@ export default{
         <a :href="project.url_repo">{{ project.url_repo }}</a>
     </p>
 </article>
+
 <img :src="img" alt="Immagine non ancora aggiunta">
 
 </section>
@@ -79,6 +80,19 @@ export default{
         width: 20%;
         flex-grow: 1;
         margin: 1rem;
+    }
+    
+    p:nth-child(2) {
+        width: 40%;
+        flex-grow: 2;
+        margin-right: 1rem;
+    }
+    
+
+    p:nth-child(3) {
+        width: 40%;
+        flex-grow: 3;
+        margin-right: 1rem;
     }
 }
 img{

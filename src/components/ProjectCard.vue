@@ -46,7 +46,7 @@ export default {
                 {{ project.id }}
             </p>
             <p>
-                <RouterLink :to="{name: 'single-project', params: {id: project.id}}">
+                <RouterLink class="lenteSearch" :to="{name: 'single-project', params: {id: project.id}}">
                     {{ project.nome }}
                 </RouterLink>
             </p>
@@ -97,6 +97,10 @@ export default {
         flex-grow: 3;
         margin-right: 1rem;
     }
+}
+
+    .lenteSearch::before{
+    content: '\1F50D';
 }
 
 
